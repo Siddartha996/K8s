@@ -9,4 +9,4 @@ spec:
     app: mypod
   ports: 
     - port: 80
-      nodePort: 30303
+      nodePort: 30305
