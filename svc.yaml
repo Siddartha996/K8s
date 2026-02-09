@@ -5,7 +5,7 @@ metadata:
   namespace: work
 spec: 
   type: NodePort
-  selectors: 
+  selector: 
     app: mypod
   ports: 
     - port: 80
