@@ -14,18 +14,18 @@ spec:
       startupProbe:
         exec: 
           command: ["cat >> file1"]
-        failureThreshold:
-        successThreshold:
-        initialDelaySeconds:
+        failureThreshold: 3
+        successThreshold: 1
+        initialDelaySeconds: 5
       livenessProbe:
         httpGet:
           path: /
-          port:
-        successThreshold:
-        initialDelaySeconds:
-        failureThreshold:
+          port: 80
+        successThreshold: 1
+        initialDelaySeconds: 5
+        failureThreshold: 3
       readinessProbe: 
         port: 8080
-        initialDelaySeconds:
-        failureThreshold:
-        successThreshold:
+        initialDelaySeconds: 5
+        failureThreshold: 3
+        successThreshold: 1
