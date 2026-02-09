@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata: 
   name: my-Pod
-  lables:
+  labels:
     app: mypod
   namespace: work
 spec: 
@@ -10,7 +10,7 @@ spec:
     - name: my-containers
       image: nginx
       ports:
-        - containersPort: 80
+        - containerPort: 80
       startupProbe:
         exec: 
           command: ["cat >> file1"]
@@ -25,7 +25,7 @@ spec:
         initialDelaySeconds: 5
         failureThreshold: 3
       readinessProbe: 
-        port: 8080
+        port: 80
         initialDelaySeconds: 5
         failureThreshold: 3
         successThreshold: 1
